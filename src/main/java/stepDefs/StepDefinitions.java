@@ -65,7 +65,7 @@ public class StepDefinitions {
     public void user_click_Create_button() throws Throwable {
         loginPage.LoginPage(webDriver);
         loginPage.clickCreatebtn();
-
+        Assert.assertTrue(loginPage.checkVerifyEmail());
     }
 
     @When("^User input login email \"([^\"]*)\"$")

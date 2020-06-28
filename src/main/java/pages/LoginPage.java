@@ -39,6 +39,9 @@ public class LoginPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//button[text()='Log In']")
     private WebElement loginbtn;
 
+    @FindBy(how = How.XPATH, using = "//div[text()='Verify Your Email']")
+    private WebElement verifyEmail;
+
     public void LoginPage(WebDriver webDriver){
         this.webdriver = webdriver;
         PageFactory.initElements(webdriver,this);
@@ -86,6 +89,13 @@ public class LoginPage extends BasePage {
 
     public void clickLoginbtn(){
         loginbtn.click();
+    }
+
+    public boolean checkVerifyEmail(){
+        waitForDisplayed(verifyEmail);
+        if (!verifyEmail.isDisplayed()){
+            return false;
+        } else return true;
     }
 
 

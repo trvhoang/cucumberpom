@@ -14,6 +14,6 @@ Feature: test SignUp function
 
       Examples: user credentials
       |email                  |password            |country        |
-      |qc-test01@yopmail.com  |qQwer1234!          |Vietnam        |
+      |qc-test07@yopmail.com  |qQwer1234!          |Vietnam        |
 
 
