@@ -20,7 +20,9 @@ pipeline {
 
             steps {
                 withMaven(maven : 'apache-maven-3.6.3') {
+                    bat 'mvn -Dcucumber.options="--tags @SignUp" test'
                     bat 'mvn -Dtest=SignUpAPI test'
+                    bat 'mvn -Dcucumber.options="--tags @Login" test'
                 }
             }
         }
