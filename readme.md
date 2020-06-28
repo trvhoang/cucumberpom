@@ -13,7 +13,9 @@ For sign up new account via GUI:
 
 For sign up new account via API:
     mvn -Dtest=SignUpAPI test
+    
     activate account via email
+    
     mvn -Dcucumber.options="--tags @Login" test
 
 
