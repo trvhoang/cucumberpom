@@ -4,6 +4,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import pages.HomePage;
 import pages.LoginPage;
 
@@ -84,14 +85,14 @@ public class StepDefinitions {
         loginPage.LoginPage(webDriver);
         loginPage.clickLoginbtn();
         loginPage.waitPageLoaded();
+        homePage.HomePage(webDriver);
     }
 
     @Then("^User is on HomePage \"([^\"]*)\"$")
     public void user_is_on_HomePage(String arg1) throws Throwable {
         homePage.HomePage(webDriver);
-//        Assert.assertEquals(homePage.pageTitle().toLowerCase(),("EQUOS").toLowerCase());
-        System.out.println("title " + homePage.pageTitle());
-        System.out.println("url "+ homePage.pageCurrentURL());
+        Assert.assertEquals(homePage.pageCurrentURL().toLowerCase(),("EQUOS").toLowerCase());
+
     }
 
 }

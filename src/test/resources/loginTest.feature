@@ -1,7 +1,7 @@
 @Login
-Feature: test SignUp function
+Feature: test Login function
 
-  Scenario Outline: User can signup new account successful
+  Scenario Outline: User can login successful
     Given User is on LoginPage "LoginPage"
     When User input login email "<email>"
     And User input login password "<password>"
