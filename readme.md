@@ -8,5 +8,13 @@ mvn clean install
 
 cd src/test
 
-mvn -Dtest=SignUpAPI test
+For sign up new account via GUI:
+    mvn -Dcucumber.options="--tags @SignUp" test
+
+For sign up new account via API:
+    mvn -Dtest=SignUpAPI test
+    activate account via email
+    mvn -Dcucumber.options="--tags @Login" test
+
+
 
